@@ -17,6 +17,7 @@
 		061F6EDB1F1ADC7100727F8A /* DayForcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F6EDA1F1ADC7100727F8A /* DayForcast.swift */; };
 		061F6EDD1F1ADEE700727F8A /* DayForcastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F6EDC1F1ADEE700727F8A /* DayForcastTableViewCell.swift */; };
 		061F6EE11F1AF99400727F8A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F6EE01F1AF99400727F8A /* Utils.swift */; };
+		06A1D0311F1E7FAD00B91FF8 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A1D0301F1E7FAD00B91FF8 /* ProgressHUD.swift */; };
 		547CFC0BB2BF970B9BB00BF4 /* Pods_YAWATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 104602419224B9DA7492A3EB /* Pods_YAWATests.framework */; };
 		D02F7287844E829368980A82 /* Pods_YAWA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C385D49BE20E5DBD5F57CF93 /* Pods_YAWA.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		061F6EDA1F1ADC7100727F8A /* DayForcast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayForcast.swift; sourceTree = "<group>"; };
 		061F6EDC1F1ADEE700727F8A /* DayForcastTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayForcastTableViewCell.swift; sourceTree = "<group>"; };
 		061F6EE01F1AF99400727F8A /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		06A1D0301F1E7FAD00B91FF8 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		0F90394599B3ACEFA7D87703 /* Pods-YAWA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YAWA/Pods-YAWA.debug.xcconfig"; sourceTree = "<group>"; };
 		104602419224B9DA7492A3EB /* Pods_YAWATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YAWATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA8593E72A0F65BDB27392F /* Pods-YAWATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWATests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YAWATests/Pods-YAWATests.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				061F6EDC1F1ADEE700727F8A /* DayForcastTableViewCell.swift */,
 				061F6ED81F1AD54500727F8A /* UIView.swift */,
 				061F6EE01F1AF99400727F8A /* Utils.swift */,
+				06A1D0301F1E7FAD00B91FF8 /* ProgressHUD.swift */,
 				061F6EBC1F1ACC0300727F8A /* Main.storyboard */,
 				061F6EBF1F1ACC0300727F8A /* Assets.xcassets */,
 				061F6EC11F1ACC0300727F8A /* LaunchScreen.storyboard */,
@@ -350,6 +353,7 @@
 				061F6EDB1F1ADC7100727F8A /* DayForcast.swift in Sources */,
 				061F6EDD1F1ADEE700727F8A /* DayForcastTableViewCell.swift in Sources */,
 				061F6EE11F1AF99400727F8A /* Utils.swift in Sources */,
+				06A1D0311F1E7FAD00B91FF8 /* ProgressHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
