@@ -10,7 +10,8 @@ import UIKit
 
 class Utils {
     
-    static let days = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Firday"]
+    private static let days = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Firday"]
+    private static let directions = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]
 
     static func getIconResourceForWeatherCondition(weatherId: Int) -> UIImage {
         // Based on weather code data found at:
@@ -81,5 +82,10 @@ class Utils {
         } else {
             return days[dayIndex]
         }
+    }
+    
+    static func getDirection(angle: Float) -> String {
+        let val = (Int((angle / 22.5) + 0.5));
+        return directions[val % 16];
     }
 }
