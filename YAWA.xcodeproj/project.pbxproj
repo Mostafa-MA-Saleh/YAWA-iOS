@@ -18,8 +18,11 @@
 		061F6EDD1F1ADEE700727F8A /* DayForcastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F6EDC1F1ADEE700727F8A /* DayForcastTableViewCell.swift */; };
 		061F6EE11F1AF99400727F8A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F6EE01F1AF99400727F8A /* Utils.swift */; };
 		06A1D0311F1E7FAD00B91FF8 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A1D0301F1E7FAD00B91FF8 /* ProgressHUD.swift */; };
-		06A1D0351F1EDE5C00B91FF8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 06A1D0341F1EDE5C00B91FF8 /* Settings.bundle */; };
 		06D394811F203A9B00E3077C /* DetailsViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D394801F203A9B00E3077C /* DetailsViewConroller.swift */; };
+		06DBAF6C1F22C50F00A29FAF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DBAF6B1F22C50F00A29FAF /* Constants.swift */; };
+		06E206031F217F8600C22BA8 /* SettingsViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E206021F217F8600C22BA8 /* SettingsViewConroller.swift */; };
+		06E206051F218DDE00C22BA8 /* countriesToCities.json in Resources */ = {isa = PBXBuildFile; fileRef = 06E206041F218DDE00C22BA8 /* countriesToCities.json */; };
+		06E206071F21936C00C22BA8 /* CityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E206061F21936C00C22BA8 /* CityPickerView.swift */; };
 		547CFC0BB2BF970B9BB00BF4 /* Pods_YAWATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 104602419224B9DA7492A3EB /* Pods_YAWATests.framework */; };
 		D02F7287844E829368980A82 /* Pods_YAWA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C385D49BE20E5DBD5F57CF93 /* Pods_YAWA.framework */; };
 /* End PBXBuildFile section */
@@ -50,8 +53,11 @@
 		061F6EDC1F1ADEE700727F8A /* DayForcastTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayForcastTableViewCell.swift; sourceTree = "<group>"; };
 		061F6EE01F1AF99400727F8A /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		06A1D0301F1E7FAD00B91FF8 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
-		06A1D0341F1EDE5C00B91FF8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		06D394801F203A9B00E3077C /* DetailsViewConroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewConroller.swift; sourceTree = "<group>"; };
+		06DBAF6B1F22C50F00A29FAF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		06E206021F217F8600C22BA8 /* SettingsViewConroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewConroller.swift; sourceTree = "<group>"; };
+		06E206041F218DDE00C22BA8 /* countriesToCities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countriesToCities.json; sourceTree = "<group>"; };
+		06E206061F21936C00C22BA8 /* CityPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityPickerView.swift; sourceTree = "<group>"; };
 		0F90394599B3ACEFA7D87703 /* Pods-YAWA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YAWA/Pods-YAWA.debug.xcconfig"; sourceTree = "<group>"; };
 		104602419224B9DA7492A3EB /* Pods_YAWATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YAWATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA8593E72A0F65BDB27392F /* Pods-YAWATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWATests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YAWATests/Pods-YAWATests.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,7 +89,6 @@
 		061F6EAC1F1ACC0300727F8A = {
 			isa = PBXGroup;
 			children = (
-				06A1D0341F1EDE5C00B91FF8 /* Settings.bundle */,
 				061F6EB71F1ACC0300727F8A /* YAWA */,
 				061F6ECC1F1ACC0300727F8A /* YAWATests */,
 				061F6EB61F1ACC0300727F8A /* Products */,
@@ -104,17 +109,13 @@
 		061F6EB71F1ACC0300727F8A /* YAWA */ = {
 			isa = PBXGroup;
 			children = (
-				061F6EB81F1ACC0300727F8A /* AppDelegate.swift */,
-				061F6EBA1F1ACC0300727F8A /* MainViewController.swift */,
-				061F6EDA1F1ADC7100727F8A /* DayForcast.swift */,
-				061F6EDC1F1ADEE700727F8A /* DayForcastTableViewCell.swift */,
-				061F6ED81F1AD54500727F8A /* UIView.swift */,
-				061F6EE01F1AF99400727F8A /* Utils.swift */,
-				06A1D0301F1E7FAD00B91FF8 /* ProgressHUD.swift */,
-				06D394801F203A9B00E3077C /* DetailsViewConroller.swift */,
-				061F6EBC1F1ACC0300727F8A /* Main.storyboard */,
+				06DBAF6D1F22DA8D00A29FAF /* ViewConrollers */,
+				06DBAF6E1F22DAA000A29FAF /* Models */,
+				06DBAF6F1F22DAAB00A29FAF /* TableCells */,
+				06DBAF701F22DAC300A29FAF /* Views */,
+				06DBAF711F22DACD00A29FAF /* Utilities */,
+				06DBAF721F22DAE200A29FAF /* Storyboards */,
 				061F6EBF1F1ACC0300727F8A /* Assets.xcassets */,
-				061F6EC11F1ACC0300727F8A /* LaunchScreen.storyboard */,
 				061F6EC41F1ACC0300727F8A /* Info.plist */,
 			);
 			path = YAWA;
@@ -127,6 +128,62 @@
 				061F6ECF1F1ACC0300727F8A /* Info.plist */,
 			);
 			path = YAWATests;
+			sourceTree = "<group>";
+		};
+		06DBAF6D1F22DA8D00A29FAF /* ViewConrollers */ = {
+			isa = PBXGroup;
+			children = (
+				061F6EBA1F1ACC0300727F8A /* MainViewController.swift */,
+				06D394801F203A9B00E3077C /* DetailsViewConroller.swift */,
+				06E206021F217F8600C22BA8 /* SettingsViewConroller.swift */,
+			);
+			name = ViewConrollers;
+			sourceTree = "<group>";
+		};
+		06DBAF6E1F22DAA000A29FAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				061F6EDA1F1ADC7100727F8A /* DayForcast.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		06DBAF6F1F22DAAB00A29FAF /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				061F6EDC1F1ADEE700727F8A /* DayForcastTableViewCell.swift */,
+			);
+			name = TableCells;
+			sourceTree = "<group>";
+		};
+		06DBAF701F22DAC300A29FAF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				061F6ED81F1AD54500727F8A /* UIView.swift */,
+				06A1D0301F1E7FAD00B91FF8 /* ProgressHUD.swift */,
+				06E206061F21936C00C22BA8 /* CityPickerView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		06DBAF711F22DACD00A29FAF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				061F6EB81F1ACC0300727F8A /* AppDelegate.swift */,
+				06E206041F218DDE00C22BA8 /* countriesToCities.json */,
+				061F6EE01F1AF99400727F8A /* Utils.swift */,
+				06DBAF6B1F22C50F00A29FAF /* Constants.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		06DBAF721F22DAE200A29FAF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				061F6EBC1F1ACC0300727F8A /* Main.storyboard */,
+				061F6EC11F1ACC0300727F8A /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		277B9BFC673A18DFF37955D7 /* Pods */ = {
@@ -240,7 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06A1D0351F1EDE5C00B91FF8 /* Settings.bundle in Resources */,
+				06E206051F218DDE00C22BA8 /* countriesToCities.json in Resources */,
 				061F6EC31F1ACC0300727F8A /* LaunchScreen.storyboard in Resources */,
 				061F6EC01F1ACC0300727F8A /* Assets.xcassets in Resources */,
 				061F6EBE1F1ACC0300727F8A /* Main.storyboard in Resources */,
@@ -355,10 +412,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				061F6EBB1F1ACC0300727F8A /* MainViewController.swift in Sources */,
+				06DBAF6C1F22C50F00A29FAF /* Constants.swift in Sources */,
+				06E206071F21936C00C22BA8 /* CityPickerView.swift in Sources */,
 				061F6ED91F1AD54500727F8A /* UIView.swift in Sources */,
 				061F6EB91F1ACC0300727F8A /* AppDelegate.swift in Sources */,
 				061F6EDB1F1ADC7100727F8A /* DayForcast.swift in Sources */,
 				061F6EDD1F1ADEE700727F8A /* DayForcastTableViewCell.swift in Sources */,
+				06E206031F217F8600C22BA8 /* SettingsViewConroller.swift in Sources */,
 				061F6EE11F1AF99400727F8A /* Utils.swift in Sources */,
 				06D394811F203A9B00E3077C /* DetailsViewConroller.swift in Sources */,
 				06A1D0311F1E7FAD00B91FF8 /* ProgressHUD.swift in Sources */,

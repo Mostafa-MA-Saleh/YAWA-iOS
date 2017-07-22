@@ -88,4 +88,16 @@ class Utils {
         let val = (Int((angle / 22.5) + 0.5));
         return directions[val % 16];
     }
+    
+    static func presentPicker(_ picker: UIPickerView, presenter: UIViewController, onDone: @escaping (UIAlertAction) -> Void) {
+        let vc = UIViewController()
+        vc.preferredContentSize = CGSize(width: 250, height: 220)
+        vc.view.addSubview(picker)
+        picker.sizeThatFits(vc.preferredContentSize)
+        let pickerAlert = UIAlertController(title: "Choose a City", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        pickerAlert.setValue(vc, forKey: "contentViewController")
+        pickerAlert.addAction(UIAlertAction(title: "Done", style: .default, handler: onDone))
+        pickerAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        presenter.present(pickerAlert, animated: true)
+    }
 }

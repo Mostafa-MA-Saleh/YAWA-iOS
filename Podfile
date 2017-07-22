@@ -9,6 +9,7 @@ target 'YAWA' do
     pod 'Alamofire', '~> 4.2.0'
     pod 'SwiftyJSON'
     pod 'CircleProgressBar', '~> 0.32'
+    pod 'CountryPicker'
   target 'YAWATests' do
     inherit! :search_paths
     # Pods for testing

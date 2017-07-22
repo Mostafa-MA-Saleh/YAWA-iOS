@@ -13,10 +13,10 @@ import SwiftyJSON
 class MainViewController: UIViewController, UITableViewDataSource {
     
     //MARK: Properties
-    let refreshConrol = UIRefreshControl()
     var url: String = ""
-    var alreadyRegistered = false
     var forcasts = [DayForcast]()
+    
+    //MARK: Outlets
     @IBOutlet weak var forcastTableView: UITableView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var maxTempLabel: UILabel!
@@ -28,14 +28,16 @@ class MainViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         forcastTableView.dataSource = self
         setupPullToRefresh()
-        registerSettingsBundle()
-        updateUrlFromDefaults()
-        refreshData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        let newUrl = buildUrlFromPrefrences()
+        if url != newUrl {
+            url = newUrl
+            refreshData()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -44,32 +46,31 @@ class MainViewController: UIViewController, UITableViewDataSource {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let detailsViewController = segue.destination as? DetailsViewController else {
-            fatalError("Unexpected destination: \(segue.destination)")
+        if let detailsViewController = segue.destination as? DetailsViewController {
+            guard let selectedCell = sender as? DayForcastTableViewCell else {
+                fatalError("Unexpected sender: \(sender ?? "nil")")
+            }
+            
+            guard let indexPath = forcastTableView.indexPath(for: selectedCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            let selectedDay = forcasts[indexPath.row]
+            detailsViewController.forcast = selectedDay
+            
+            forcastTableView.deselectRow(at: indexPath, animated: true)
         }
-        
-        guard let selectedCell = sender as? DayForcastTableViewCell else {
-            fatalError("Unexpected sender: \(sender ?? "nil")")
-        }
-        
-        guard let indexPath = forcastTableView.indexPath(for: selectedCell) else {
-            fatalError("The selected cell is not being displayed by the table")
-        }
-        
-        let selectedDay = forcasts[indexPath.row]
-        detailsViewController.forcast = selectedDay
-        
-        forcastTableView.deselectRow(at: indexPath, animated: true)
     }
    
     func setupPullToRefresh() {
-        refreshConrol.attributedTitle = NSAttributedString(string: "Pull To Refresh!")
-        refreshConrol.addTarget(self, action: #selector(MainViewController.refreshData), for: .valueChanged)
-        forcastTableView.refreshControl = refreshConrol
+        let refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull To Refresh!")
+        refreshControl.addTarget(self, action: #selector(MainViewController.refreshData), for: .valueChanged)
+        forcastTableView.refreshControl = refreshControl
     }
     
     func refreshData() {
-        refreshConrol.beginRefreshing()
+        forcastTableView.refreshControl?.beginRefreshing()
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         Alamofire.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
@@ -81,28 +82,15 @@ class MainViewController: UIViewController, UITableViewDataSource {
                 self.loadData(response)
             }
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            self.refreshConrol.endRefreshing()
+            self.forcastTableView.refreshControl?.endRefreshing()
         }
     }
     
-    func registerSettingsBundle(){
-        let appDefaults = [String:AnyObject]()
-        UserDefaults.standard.register(defaults: appDefaults)
-    }
-    
-    func updateUrlFromDefaults(){
-        let defaults = UserDefaults.standard
-        var cityId = "361058"
-        var units: String = "metric"
-        if let defaultId = defaults.string(forKey: "city_id_preference") {
-            if !defaultId.isEmpty {
-                cityId = defaultId
-            }
-        }
-        if defaults.bool(forKey: "imperial_preference") {
-            units = "imperial"
-        }
-        url = "http://api.openweathermap.org/data/2.5/forecast/daily?id=\(cityId)&units=\(units)&cnt=16&APPID=026ee82032707259db948706d2c48df2"
+    func buildUrlFromPrefrences() -> String{
+        let preferences = UserDefaults.standard
+        let units: String = preferences.string(forKey: Constants.KEY_UNITS) ?? Constants.DEFAULT_UNITS
+        let cityId = preferences.string(forKey: Constants.KEY_CITY_ID)?.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) ?? Constants.DEFAULT_CITY_ID
+        return String(format: Constants.URL, arguments: [cityId, units])
     }
     
     // MARK: - Table view data source
