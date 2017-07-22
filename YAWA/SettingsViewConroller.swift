@@ -20,13 +20,14 @@ class SettingsViewController: UIViewController {
     //MARK: Outlets
     @IBOutlet weak var unitsSwitch: UISwitch!
     @IBOutlet weak var selectedLocationLabel: UILabel!
+    @IBOutlet weak var locationView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let preferedUnits = preferences.string(forKey: Constants.KEY_UNITS) {
             unitsSwitch.isOn = preferedUnits == Constants.UNITS_IMPERIAL
         }
-        selectedLocationLabel.text = (preferences.string(forKey: Constants.KEY_CITY_ID) ?? Constants.DEFAULT_CITY_ID) + " >"
+        selectedLocationLabel.text = (preferences.string(forKey: Constants.KEY_CITY_ID) ?? Constants.DEFAULT_CITY_ID)
     }
     
     func didSelectCountry() {
@@ -45,7 +46,7 @@ class SettingsViewController: UIViewController {
     
     func didSelectCity() {
         let currentCityId = "\(cityPicker.selectedCity),\(countryPicker.selectedCountryCode!)"
-        selectedLocationLabel.text = currentCityId + " >"
+        selectedLocationLabel.text = currentCityId
         preferences.set(currentCityId, forKey: Constants.KEY_CITY_ID)
         preferences.synchronize()
     }
@@ -70,7 +71,12 @@ class SettingsViewController: UIViewController {
         preferences.synchronize()
     }
     
-    @IBAction func LocationClick(_ sender: UITapGestureRecognizer) {
-        showCountryPicker()
+    @IBAction func LocationClick(_ sender: UILongPressGestureRecognizer) {
+        if sender.state == .began {
+            locationView.backgroundColor = UIColor.groupTableViewBackground
+        } else if sender.state == .ended {
+            locationView.backgroundColor = UIColor.white
+            showCountryPicker()
+        }
     }
 }
