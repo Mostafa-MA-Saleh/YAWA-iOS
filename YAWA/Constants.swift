@@ -23,4 +23,10 @@ class Constants {
     static let API_KEY         = "026ee82032707259db948706d2c48df2"
     static let URL             = "http://api.openweathermap.org/data/2.5/forecast/daily?q=%@&units=%@&cnt=16&APPID=\(API_KEY)"
     
+    //Seques
+    static let SEGUE_SETTINGS = "settingsSegue"
+    
+    //Quick Actions
+    static let ACTION_SETTINGS = "Quick_Action.Settings"
+    
 }
