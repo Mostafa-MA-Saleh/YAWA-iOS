@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (4.7.2)
+  - CircleProgressBar (0.32)
+  - CountryPicker (1.3)
+  - SwiftyJSON (4.1.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - CircleProgressBar
+  - CountryPicker
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  CircleProgressBar: 3920079be5224b62b3d9ed6eeb23ac01c835b681
+  CountryPicker: 664c26411d833bb068c80beb15dc951eadde2911
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+
+PODFILE CHECKSUM: 7b75b7ed2882d5fea3b05994e769a2772f9c8de8
+
+COCOAPODS: 1.4.0

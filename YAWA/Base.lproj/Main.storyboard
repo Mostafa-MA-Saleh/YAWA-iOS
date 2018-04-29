@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CF2-Ez-by4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CF2-Ez-by4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +20,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8L2-Ak-Hzc">
@@ -248,7 +249,10 @@
                                                     <outlet property="forcastLabel" destination="JRs-OP-Fe9" id="8ZY-Gx-rnA"/>
                                                     <outlet property="maxTempLabel" destination="2y4-sz-D4q" id="CwD-qX-tMH"/>
                                                     <outlet property="minTempLabel" destination="IIx-PG-mcq" id="3mf-BG-iCt"/>
-                                                    <segue destination="DLr-WH-5bQ" kind="show" id="jIO-JR-YVJ"/>
+                                                    <segue destination="DLr-WH-5bQ" kind="show" id="jIO-JR-YVJ">
+                                                        <segue key="commit" inheritsFrom="parent" id="dGp-IM-YIr"/>
+                                                        <segue key="preview" inheritsFrom="commit" id="9KG-z4-Fxb"/>
+                                                    </segue>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -297,7 +301,7 @@
                         <viewControllerLayoutGuide type="bottom" id="UMj-e7-qZu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QLW-MB-6Va">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB5-zg-QOi">
@@ -310,16 +314,16 @@
                                                 <rect key="frame" x="20" y="0.0" width="335" height="158"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="G5T-x2-pHc">
-                                                        <rect key="frame" x="0.0" y="11" width="144.5" height="136"/>
+                                                        <rect key="frame" x="0.0" y="11" width="149" height="136"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3o-Pe-uiY">
-                                                                <rect key="frame" x="26.5" y="0.0" width="91" height="72"/>
+                                                                <rect key="frame" x="26.5" y="0.0" width="96" height="72"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isS-vu-kPK">
-                                                                <rect key="frame" x="41.5" y="88" width="61.5" height="48"/>
+                                                                <rect key="frame" x="42" y="88" width="64.5" height="48"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -327,17 +331,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HMf-bC-LGk">
-                                                        <rect key="frame" x="144.5" y="0.0" width="190.5" height="158"/>
+                                                        <rect key="frame" x="149" y="0.0" width="186" height="158"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zFp-qy-tyT">
-                                                                <rect key="frame" x="35" y="0.0" width="120" height="120"/>
+                                                                <rect key="frame" x="33" y="0.0" width="120" height="120"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="120" id="Ojx-63-zi4"/>
                                                                     <constraint firstAttribute="height" constant="120" id="STB-Ou-upS"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43j-RR-FdL">
-                                                                <rect key="frame" x="63.5" y="128" width="63.5" height="30"/>
+                                                                <rect key="frame" x="61.5" y="128" width="62.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -565,7 +569,7 @@
                         <viewControllerLayoutGuide type="bottom" id="KSD-I9-guL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="y0t-i0-z9X">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J5t-Oa-KUL">
@@ -727,7 +731,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CF2-Ez-by4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="PLI-lC-nBK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.31764705879999999" green="0.52156862749999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -761,4 +765,7 @@
         <image name="chevron" width="16" height="29"/>
         <image name="ic_rain" width="64" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="jIO-JR-YVJ"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -12,7 +12,6 @@
 		061F6EBE1F1ACC0300727F8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061F6EBC1F1ACC0300727F8A /* Main.storyboard */; };
 		061F6EC01F1ACC0300727F8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 061F6EBF1F1ACC0300727F8A /* Assets.xcassets */; };
 		061F6EC31F1ACC0300727F8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061F6EC11F1ACC0300727F8A /* LaunchScreen.storyboard */; };
-		061F6ECE1F1ACC0300727F8A /* YAWATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F6ECD1F1ACC0300727F8A /* YAWATests.swift */; };
 		061F6ED91F1AD54500727F8A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F6ED81F1AD54500727F8A /* UIView.swift */; };
 		061F6EDB1F1ADC7100727F8A /* DayForcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F6EDA1F1ADC7100727F8A /* DayForcast.swift */; };
 		061F6EDD1F1ADEE700727F8A /* DayForcastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F6EDC1F1ADEE700727F8A /* DayForcastTableViewCell.swift */; };
@@ -46,8 +45,6 @@
 		061F6EC21F1ACC0300727F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		061F6EC41F1ACC0300727F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		061F6EC91F1ACC0300727F8A /* YAWATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YAWATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		061F6ECD1F1ACC0300727F8A /* YAWATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAWATests.swift; sourceTree = "<group>"; };
-		061F6ECF1F1ACC0300727F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		061F6ED81F1AD54500727F8A /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		061F6EDA1F1ADC7100727F8A /* DayForcast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayForcast.swift; sourceTree = "<group>"; };
 		061F6EDC1F1ADEE700727F8A /* DayForcastTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayForcastTableViewCell.swift; sourceTree = "<group>"; };
@@ -90,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				061F6EB71F1ACC0300727F8A /* YAWA */,
-				061F6ECC1F1ACC0300727F8A /* YAWATests */,
 				061F6EB61F1ACC0300727F8A /* Products */,
 				277B9BFC673A18DFF37955D7 /* Pods */,
 				A034392620134401F84FD49C /* Frameworks */,
@@ -119,15 +115,6 @@
 				061F6EC41F1ACC0300727F8A /* Info.plist */,
 			);
 			path = YAWA;
-			sourceTree = "<group>";
-		};
-		061F6ECC1F1ACC0300727F8A /* YAWATests */ = {
-			isa = PBXGroup;
-			children = (
-				061F6ECD1F1ACC0300727F8A /* YAWATests.swift */,
-				061F6ECF1F1ACC0300727F8A /* Info.plist */,
-			);
-			path = YAWATests;
 			sourceTree = "<group>";
 		};
 		06DBAF6D1F22DA8D00A29FAF /* ViewConrollers */ = {
@@ -214,8 +201,8 @@
 			buildConfigurationList = 061F6ED21F1ACC0300727F8A /* Build configuration list for PBXNativeTarget "YAWA" */;
 			buildPhases = (
 				EF40FC0CF6F2ACBD340C726B /* [CP] Check Pods Manifest.lock */,
-				061F6EB11F1ACC0300727F8A /* Sources */,
 				061F6EB21F1ACC0300727F8A /* Frameworks */,
+				061F6EB11F1ACC0300727F8A /* Sources */,
 				061F6EB31F1ACC0300727F8A /* Resources */,
 				06A5AD14155F171F6588DB0D /* [CP] Embed Pods Frameworks */,
 				0AF95C8B3123A63B2FD76916 /* [CP] Copy Pods Resources */,
@@ -257,17 +244,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Mostafa Saleh";
 				TargetAttributes = {
 					061F6EB41F1ACC0300727F8A = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 8MG847C3TY;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					061F6EC81F1ACC0300727F8A = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 8MG847C3TY;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 061F6EB41F1ACC0300727F8A;
 					};
@@ -320,9 +309,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YAWA/Pods-YAWA-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CircleProgressBar/CircleProgressBar.framework",
+				"${BUILT_PRODUCTS_DIR}/CountryPicker/CountryPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleProgressBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountryPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -365,13 +363,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YAWATests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E92E06509089D16CDF63D713 /* [CP] Copy Pods Resources */ = {
@@ -395,13 +396,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YAWA-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -429,7 +433,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				061F6ECE1F1ACC0300727F8A /* YAWATests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,15 +476,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -524,15 +535,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -569,7 +588,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.mostafa.ma.saleh.YAWA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -584,7 +604,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.mostafa.ma.saleh.YAWA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -599,7 +620,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.mostafa.ma.saleh.YAWATests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YAWA.app/YAWA";
 			};
 			name = Debug;
@@ -615,7 +637,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.mostafa.ma.saleh.YAWATests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YAWA.app/YAWA";
 			};
 			name = Release;

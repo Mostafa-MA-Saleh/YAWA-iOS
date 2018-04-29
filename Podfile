@@ -6,9 +6,9 @@ target 'YAWA' do
   use_frameworks!
 
   # Pods for YAWA
-    pod 'Alamofire', '~> 4.2.0'
+    pod 'Alamofire'
     pod 'SwiftyJSON'
-    pod 'CircleProgressBar', '~> 0.32'
+    pod 'CircleProgressBar'
     pod 'CountryPicker'
   target 'YAWATests' do
     inherit! :search_paths

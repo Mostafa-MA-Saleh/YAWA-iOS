@@ -69,7 +69,7 @@ class MainViewController: UIViewController, UITableViewDataSource {
         forcastTableView.refreshControl = refreshControl
     }
     
-    func refreshData() {
+    @objc func refreshData() {
         forcastTableView.refreshControl?.beginRefreshing()
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         Alamofire.request(url, method: .get).validate().responseJSON { response in
