@@ -205,7 +205,6 @@
 				061F6EB11F1ACC0300727F8A /* Sources */,
 				061F6EB31F1ACC0300727F8A /* Resources */,
 				06A5AD14155F171F6588DB0D /* [CP] Embed Pods Frameworks */,
-				0AF95C8B3123A63B2FD76916 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,8 +223,6 @@
 				061F6EC51F1ACC0300727F8A /* Sources */,
 				061F6EC61F1ACC0300727F8A /* Frameworks */,
 				061F6EC71F1ACC0300727F8A /* Resources */,
-				A0E53EC622C7BC53FBDCBBD1 /* [CP] Embed Pods Frameworks */,
-				E92E06509089D16CDF63D713 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -327,36 +324,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YAWA/Pods-YAWA-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0AF95C8B3123A63B2FD76916 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YAWA/Pods-YAWA-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A0E53EC622C7BC53FBDCBBD1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YAWATests/Pods-YAWATests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D4298AC291421F854DEB0B83 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -373,21 +340,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E92E06509089D16CDF63D713 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YAWATests/Pods-YAWATests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EF40FC0CF6F2ACBD340C726B /* [CP] Check Pods Manifest.lock */ = {
@@ -588,7 +540,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.mostafa.ma.saleh.YAWA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -604,7 +556,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.mostafa.ma.saleh.YAWA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

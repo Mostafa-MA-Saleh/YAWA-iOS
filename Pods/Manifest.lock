@@ -10,6 +10,13 @@ DEPENDENCIES:
   - CountryPicker
   - SwiftyJSON
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - CircleProgressBar
+    - CountryPicker
+    - SwiftyJSON
+
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   CircleProgressBar: 3920079be5224b62b3d9ed6eeb23ac01c835b681
@@ -18,4 +25,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 7b75b7ed2882d5fea3b05994e769a2772f9c8de8
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.2
