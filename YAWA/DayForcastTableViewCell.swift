@@ -9,23 +9,11 @@
 import UIKit
 
 class DayForcastTableViewCell: UITableViewCell {
-    
-    //MARK: Properties
-    @IBOutlet weak var focastImageView: UIImageView!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var forcastLabel: UILabel!
-    @IBOutlet weak var maxTempLabel: UILabel!
-    @IBOutlet weak var minTempLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
+    // MARK: Properties
+
+    @IBOutlet var focastImageView: UIImageView!
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var forcastLabel: UILabel!
+    @IBOutlet var maxTempLabel: UILabel!
+    @IBOutlet var minTempLabel: UILabel!
 }

@@ -11,7 +11,6 @@ import UIKit
 class Utils {
     
     private static let days = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Firday"]
-    private static let directions = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]
 
     static func getIconResourceForWeatherCondition(weatherId: Int) -> UIImage {
         // Based on weather code data found at:
@@ -71,10 +70,6 @@ class Utils {
         return #imageLiteral(resourceName: "art_clear")
     }
     
-    static func getRandomNumber(from: Int, upTo: Int) -> Int {
-        return Int(arc4random_uniform(UInt32(upTo - from))) + from
-    }
-    
     static func getDayOfWeek(number: Int) -> String {
         let dayIndex = (number % 7) - 1
         if dayIndex < 0 {
@@ -84,17 +79,12 @@ class Utils {
         }
     }
     
-    static func getDirection(angle: Float) -> String {
-        let val = (Int((angle / 22.5) + 0.5));
-        return directions[val % 16];
-    }
-    
     static func presentPicker(_ picker: UIPickerView, presenter: UIViewController, onDone: @escaping (UIAlertAction) -> Void) {
         let vc = UIViewController()
         vc.preferredContentSize = CGSize(width: 250, height: 220)
         vc.view.addSubview(picker)
         picker.sizeThatFits(vc.preferredContentSize)
-        let pickerAlert = UIAlertController(title: "Choose a City", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        let pickerAlert = UIAlertController(title: "Choose a City", message: nil, preferredStyle: UIAlertController.Style.alert)
         pickerAlert.setValue(vc, forKey: "contentViewController")
         pickerAlert.addAction(UIAlertAction(title: "Done", style: .default, handler: onDone))
         pickerAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))

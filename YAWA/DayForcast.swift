@@ -8,30 +8,48 @@
 
 import Foundation
 
-class DayForcast {
-    
-    let weatherId: Int
-    let temp_max: Int
-    let temp_min: Int
-    let forcast: String
-    let date: String
-    let pressure: Int
-    let humidity: Int
-    let wind_direction: String
-    let wind_speed: Int
-    let clouds: Float
-    
-    init(weatherId: Int, date: String, forcast: String, temp_max: Int, temp_min: Int, pressure: Int, humidity: Int, wind_direction: Float, wind_speed: Int, clouds: Float) {
-        self.weatherId = weatherId
-        self.date = date
-        self.forcast = forcast
-        self.temp_max = temp_max
-        self.temp_min = temp_min
-        self.pressure = pressure
-        self.humidity = humidity
-        self.wind_direction = Utils.getDirection(angle: wind_direction)
-        self.wind_speed = wind_speed
-        self.clouds = clouds / 100
+struct DayForcast: Decodable {
+    var weatherId: Int = 0
+    var maxTemp: Int = 0
+    var minTemp: Int = 0
+    var description: String = ""
+    var dayOfTheWeek: String = ""
+    var pressure: Int = 0
+    var humidity: Int = 0
+    var windDirection: Direction = .N
+    var windSpeed: Int = 0
+    var clouds: Float = 0.0
+
+    private enum CodingKeys: String, CodingKey {
+        case weatherId = "id"
+        case forcast = "main"
+        case temp_max = "max"
+        case temp_min = "min"
     }
-    
+
+    private enum RootKeys: String, CodingKey {
+        case temp
+        case weather
+        case pressure
+        case humidity
+        case speed
+        case deg
+        case clouds
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: RootKeys.self)
+        var weatherContainer = try container.nestedUnkeyedContainer(forKey: .weather)
+        let weather = try weatherContainer.nestedContainer(keyedBy: CodingKeys.self)
+        weatherId = try weather.decode(Int.self, forKey: .weatherId)
+        description = try weather.decode(String.self, forKey: .forcast)
+        let temp = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .temp)
+        maxTemp = try temp.decode(Float.self, forKey: .temp_max).roundedToInt()
+        minTemp = try temp.decode(Float.self, forKey: .temp_min).roundedToInt()
+        pressure = try container.decode(Float.self, forKey: .pressure).roundedToInt()
+        humidity = try container.decode(Float.self, forKey: .humidity).roundedToInt()
+        windSpeed = try container.decode(Float.self, forKey: .speed).roundedToInt()
+        windDirection = Direction.from(angle: try container.decode(Float.self, forKey: .deg))
+        clouds = try container.decode(Float.self, forKey: .clouds) / 100.0
+    }
 }

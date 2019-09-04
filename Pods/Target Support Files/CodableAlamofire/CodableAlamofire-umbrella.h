@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "CodableAlamofire.h"
 
-FOUNDATION_EXPORT double Pods_YAWATestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_YAWATestsVersionString[];
+FOUNDATION_EXPORT double CodableAlamofireVersionNumber;
+FOUNDATION_EXPORT const unsigned char CodableAlamofireVersionString[];
 

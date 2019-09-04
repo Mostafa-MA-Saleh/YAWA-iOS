@@ -35,14 +35,14 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = forcast.date
-        tempMaxLabel.text = "\(forcast.temp_max)°"
-        tempMinLabel.text = "\(forcast.temp_min)°"
-        forcastLabel.text = forcast.forcast
+        title = forcast.dayOfTheWeek
+        tempMaxLabel.text = "\(forcast.maxTemp)°"
+        tempMinLabel.text = "\(forcast.minTemp)°"
+        forcastLabel.text = forcast.description
         pressureLabel.text = "\(forcast.pressure) hPa"
         humidityLabel.text = "\(forcast.humidity)%"
-        windDirectionLabel.text = forcast.wind_direction
-        windSpeedLabel.text = "\(forcast.wind_speed) \(windspeedUnit)"
+        windDirectionLabel.text = forcast.windDirection.rawValue
+        windSpeedLabel.text = "\(forcast.windSpeed) \(windspeedUnit)"
         cloudsProgressBar.setProgress(CGFloat(forcast.clouds), animated: true)
         forcastImageView.image = Utils.getArtResourceForWeatherCondition(weatherId: forcast.weatherId)
     }

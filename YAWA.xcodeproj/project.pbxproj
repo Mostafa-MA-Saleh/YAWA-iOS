@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061D9066231F2C8400B83B9F /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061D9065231F2C8400B83B9F /* Direction.swift */; };
+		061D9068231F381A00B83B9F /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061D9067231F381A00B83B9F /* Float.swift */; };
 		061F6EB91F1ACC0300727F8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F6EB81F1ACC0300727F8A /* AppDelegate.swift */; };
 		061F6EBB1F1ACC0300727F8A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F6EBA1F1ACC0300727F8A /* MainViewController.swift */; };
 		061F6EBE1F1ACC0300727F8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061F6EBC1F1ACC0300727F8A /* Main.storyboard */; };
@@ -22,21 +24,12 @@
 		06E206031F217F8600C22BA8 /* SettingsViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E206021F217F8600C22BA8 /* SettingsViewConroller.swift */; };
 		06E206051F218DDE00C22BA8 /* countriesToCities.json in Resources */ = {isa = PBXBuildFile; fileRef = 06E206041F218DDE00C22BA8 /* countriesToCities.json */; };
 		06E206071F21936C00C22BA8 /* CityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E206061F21936C00C22BA8 /* CityPickerView.swift */; };
-		547CFC0BB2BF970B9BB00BF4 /* Pods_YAWATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 104602419224B9DA7492A3EB /* Pods_YAWATests.framework */; };
 		D02F7287844E829368980A82 /* Pods_YAWA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C385D49BE20E5DBD5F57CF93 /* Pods_YAWA.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		061F6ECA1F1ACC0300727F8A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 061F6EAD1F1ACC0300727F8A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 061F6EB41F1ACC0300727F8A;
-			remoteInfo = YAWA;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		061D9065231F2C8400B83B9F /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		061D9067231F381A00B83B9F /* Float.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
 		061F6EB51F1ACC0300727F8A /* YAWA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YAWA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		061F6EB81F1ACC0300727F8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		061F6EBA1F1ACC0300727F8A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -44,7 +37,6 @@
 		061F6EBF1F1ACC0300727F8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		061F6EC21F1ACC0300727F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		061F6EC41F1ACC0300727F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		061F6EC91F1ACC0300727F8A /* YAWATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YAWATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		061F6ED81F1AD54500727F8A /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		061F6EDA1F1ADC7100727F8A /* DayForcast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayForcast.swift; sourceTree = "<group>"; };
 		061F6EDC1F1ADEE700727F8A /* DayForcastTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayForcastTableViewCell.swift; sourceTree = "<group>"; };
@@ -56,10 +48,7 @@
 		06E206041F218DDE00C22BA8 /* countriesToCities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countriesToCities.json; sourceTree = "<group>"; };
 		06E206061F21936C00C22BA8 /* CityPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityPickerView.swift; sourceTree = "<group>"; };
 		0F90394599B3ACEFA7D87703 /* Pods-YAWA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YAWA/Pods-YAWA.debug.xcconfig"; sourceTree = "<group>"; };
-		104602419224B9DA7492A3EB /* Pods_YAWATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YAWATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FA8593E72A0F65BDB27392F /* Pods-YAWATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWATests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YAWATests/Pods-YAWATests.release.xcconfig"; sourceTree = "<group>"; };
 		C385D49BE20E5DBD5F57CF93 /* Pods_YAWA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YAWA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA87C5DC63AC4FC6A56DEE0A /* Pods-YAWATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWATests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YAWATests/Pods-YAWATests.debug.xcconfig"; sourceTree = "<group>"; };
 		DDF97D34FEA2462715D30376 /* Pods-YAWA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA.release.xcconfig"; path = "Pods/Target Support Files/Pods-YAWA/Pods-YAWA.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,14 +58,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D02F7287844E829368980A82 /* Pods_YAWA.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		061F6EC61F1ACC0300727F8A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				547CFC0BB2BF970B9BB00BF4 /* Pods_YAWATests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				061F6EB51F1ACC0300727F8A /* YAWA.app */,
-				061F6EC91F1ACC0300727F8A /* YAWATests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,6 +93,7 @@
 				06DBAF721F22DAE200A29FAF /* Storyboards */,
 				061F6EBF1F1ACC0300727F8A /* Assets.xcassets */,
 				061F6EC41F1ACC0300727F8A /* Info.plist */,
+				061D9067231F381A00B83B9F /* Float.swift */,
 			);
 			path = YAWA;
 			sourceTree = "<group>";
@@ -131,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				061F6EDA1F1ADC7100727F8A /* DayForcast.swift */,
+				061D9065231F2C8400B83B9F /* Direction.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -178,8 +160,6 @@
 			children = (
 				0F90394599B3ACEFA7D87703 /* Pods-YAWA.debug.xcconfig */,
 				DDF97D34FEA2462715D30376 /* Pods-YAWA.release.xcconfig */,
-				DA87C5DC63AC4FC6A56DEE0A /* Pods-YAWATests.debug.xcconfig */,
-				1FA8593E72A0F65BDB27392F /* Pods-YAWATests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -188,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				C385D49BE20E5DBD5F57CF93 /* Pods_YAWA.framework */,
-				104602419224B9DA7492A3EB /* Pods_YAWATests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -215,25 +194,6 @@
 			productReference = 061F6EB51F1ACC0300727F8A /* YAWA.app */;
 			productType = "com.apple.product-type.application";
 		};
-		061F6EC81F1ACC0300727F8A /* YAWATests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 061F6ED51F1ACC0300727F8A /* Build configuration list for PBXNativeTarget "YAWATests" */;
-			buildPhases = (
-				D4298AC291421F854DEB0B83 /* [CP] Check Pods Manifest.lock */,
-				061F6EC51F1ACC0300727F8A /* Sources */,
-				061F6EC61F1ACC0300727F8A /* Frameworks */,
-				061F6EC71F1ACC0300727F8A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				061F6ECB1F1ACC0300727F8A /* PBXTargetDependency */,
-			);
-			name = YAWATests;
-			productName = YAWATests;
-			productReference = 061F6EC91F1ACC0300727F8A /* YAWATests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -241,21 +201,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Mostafa Saleh";
 				TargetAttributes = {
 					061F6EB41F1ACC0300727F8A = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 8MG847C3TY;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Automatic;
-					};
-					061F6EC81F1ACC0300727F8A = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 8MG847C3TY;
-						LastSwiftMigration = 0920;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 061F6EB41F1ACC0300727F8A;
 					};
 				};
 			};
@@ -264,6 +217,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -273,7 +227,6 @@
 			projectRoot = "";
 			targets = (
 				061F6EB41F1ACC0300727F8A /* YAWA */,
-				061F6EC81F1ACC0300727F8A /* YAWATests */,
 			);
 		};
 /* End PBXProject section */
@@ -290,13 +243,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		061F6EC71F1ACC0300727F8A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -306,40 +252,22 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YAWA/Pods-YAWA-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-YAWA/Pods-YAWA-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CircleProgressBar/CircleProgressBar.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CountryPicker/CountryPicker.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleProgressBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountryPicker.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YAWA/Pods-YAWA-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D4298AC291421F854DEB0B83 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-YAWATests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YAWA/Pods-YAWA-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EF40FC0CF6F2ACBD340C726B /* [CP] Check Pods Manifest.lock */ = {
@@ -376,27 +304,14 @@
 				061F6EDD1F1ADEE700727F8A /* DayForcastTableViewCell.swift in Sources */,
 				06E206031F217F8600C22BA8 /* SettingsViewConroller.swift in Sources */,
 				061F6EE11F1AF99400727F8A /* Utils.swift in Sources */,
+				061D9068231F381A00B83B9F /* Float.swift in Sources */,
 				06D394811F203A9B00E3077C /* DetailsViewConroller.swift in Sources */,
 				06A1D0311F1E7FAD00B91FF8 /* ProgressHUD.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		061F6EC51F1ACC0300727F8A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				061D9066231F2C8400B83B9F /* Direction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		061F6ECB1F1ACC0300727F8A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 061F6EB41F1ACC0300727F8A /* YAWA */;
-			targetProxy = 061F6ECA1F1ACC0300727F8A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		061F6EBC1F1ACC0300727F8A /* Main.storyboard */ = {
@@ -422,6 +337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -481,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -540,8 +457,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.mostafa.ma.saleh.YAWA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -556,42 +472,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.mostafa.ma.saleh.YAWA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		061F6ED61F1ACC0300727F8A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA87C5DC63AC4FC6A56DEE0A /* Pods-YAWATests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 8MG847C3TY;
-				INFOPLIST_FILE = YAWATests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.mostafa.ma.saleh.YAWATests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YAWA.app/YAWA";
-			};
-			name = Debug;
-		};
-		061F6ED71F1ACC0300727F8A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FA8593E72A0F65BDB27392F /* Pods-YAWATests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 8MG847C3TY;
-				INFOPLIST_FILE = YAWATests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.mostafa.ma.saleh.YAWATests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YAWA.app/YAWA";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -612,15 +493,6 @@
 			buildConfigurations = (
 				061F6ED31F1ACC0300727F8A /* Debug */,
 				061F6ED41F1ACC0300727F8A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		061F6ED51F1ACC0300727F8A /* Build configuration list for PBXNativeTarget "YAWATests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				061F6ED61F1ACC0300727F8A /* Debug */,
-				061F6ED71F1ACC0300727F8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
