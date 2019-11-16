@@ -6,11 +6,10 @@
 //  Copyright © 2017 Mostafa Saleh. All rights reserved.
 //
 
-import SwiftyJSON
 import UIKit
 
 class CityPicker: UIPickerView, UIPickerViewDataSource, UIPickerViewDelegate {
-    var cities = [JSON]()
+    var cities: [String] = []
     var selectedCity = ""
 
     init() {
@@ -27,12 +26,12 @@ class CityPicker: UIPickerView, UIPickerViewDataSource, UIPickerViewDelegate {
         super.delegate = self
     }
 
-    func populate(cities: [JSON]) -> Bool {
+    func populate(cities: [String]) -> Bool {
         self.cities = cities
         if cities.count == 0 {
             return false
         }
-        selectedCity = cities[0].stringValue
+        selectedCity = cities[0]
         reloadAllComponents()
         return true
     }
@@ -46,10 +45,10 @@ class CityPicker: UIPickerView, UIPickerViewDataSource, UIPickerViewDelegate {
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return cities[row].stringValue
+        return cities[row]
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedCity = cities[row].stringValue
+        selectedCity = cities[row]
     }
 }

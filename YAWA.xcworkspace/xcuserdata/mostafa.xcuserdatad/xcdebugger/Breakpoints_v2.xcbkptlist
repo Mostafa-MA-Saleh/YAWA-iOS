@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YAWA/MainViewController.swift"
-            timestampString = "589249679.1558"
+            timestampString = "589412343.416293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155">
+            startingLineNumber = "154"
+            endingLineNumber = "154">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
